@@ -2,7 +2,7 @@
   "name": "Extension testing example",
   "version": "1.0",
   "description": "Example extension on how to unit test browser extensions",
-  "permissions": [],
+  "permissions": ["declarativeContent"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false

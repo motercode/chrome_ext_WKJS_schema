@@ -9,17 +9,8 @@ const preprocessors = {
 
 const karmaWebpackConfig = Object.assign({}, mainWebpackConfig(), {
   mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.(jsx|js)$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      }
-    ]
-  },
   optimization: {},
-  devtool: false
+  devtool: 'source-map'
 });
 
 module.exports = function karmaConfig(config) {

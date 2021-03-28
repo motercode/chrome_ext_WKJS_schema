@@ -31,7 +31,7 @@ module.exports = function webpackConfig() {
       clean: true
     },
     mode : "production",
-//    devtool: 'eval-source-map',
+//    devtool: 'source-map',
 //    devServer: {
 //      contentBase: './dist',
 //    },
