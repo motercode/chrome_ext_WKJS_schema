@@ -1,5 +1,6 @@
 {
-  "name": "Extension testing example",
+  "name": "__MSG_ext_name__",
+  "default_locale" : "es",
   "version": "1.0",
   "description": "Example extension on how to unit test browser extensions",
   "permissions": ["declarativeContent"],
@@ -8,7 +9,7 @@
     "persistent": false
   },
   "page_action": {
-    "default_popup": "popup-content.html"
+    "default_popup": "views/popup-content.html"
   },
   "manifest_version": 2
 }

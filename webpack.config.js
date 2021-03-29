@@ -31,7 +31,7 @@ module.exports = function webpackConfig() {
       clean: true
     },
     mode : "production",
-//    devtool: 'source-map',
+    devtool: false, // 'source-map',
 //    devServer: {
 //      contentBase: './dist',
 //    },
@@ -48,21 +48,21 @@ module.exports = function webpackConfig() {
             loader: "html-loader"
           }
         },
-{
-        test: /\.css$/, // or /\.css$/i if you aren't using sass
-        use: [
-          {
-            loader: 'style-loader',
-            options: {
-                insert: 'head', // insert style tag inside of <head>
-                injectType: 'singletonStyleTag' // this is for wrap all your style in just one style tag
-            },
-          },
-          "css-loader",
-        ],
-      },
+        {
+          test: /\.css$/, // or /\.css$/i if you aren't using sass
+          use:[
+              {
+                loader: 'style-loader',
+                options: {
+                  insert: 'head', // insert style tag inside of <head>
+                  injectType: 'singletonStyleTag' // this is for wrap all your style in just one style tag
+                },
+              },
+                "css-loader",    //its only acts if you import a css by javascript like import css from "/static/css/popup.css";
+              ],
+        },
       ]
-    },
+      },
     plugins: [
       new webpack.optimize.ModuleConcatenationPlugin(),
       new CopyWebpackPlugin( {patterns: [

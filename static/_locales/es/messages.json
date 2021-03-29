@@ -1,0 +1,12 @@
+{
+  "ext_name" :{
+    "message" : "Ejemplo de extensión de chrome",
+    "description" : "Ejemplo para poder iniciar un proyecto de una extensión de google chrome con test y localización."
+  },
+  "backgroundColor" :{
+    "message" : "red"
+  },
+  "testMessage" :{
+    "message" : "rojo si estas en Español"
+  }
+}

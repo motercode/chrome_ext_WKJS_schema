@@ -1,0 +1,17 @@
+body {
+  /* direction: __MSG_@@bidi_dir__;
+  background-image:url('chrome-extension://__MSG_@@extension_id__/background.png'); */
+}
+
+div#header {
+  /* margin-bottom: 1.05em;
+  overflow: hidden;
+  padding-bottom: 1.5em;
+  padding-__MSG_@@bidi_start_edge__: 0;
+  padding-__MSG_@@bidi_end_edge__: 1.5em;
+  position: relative; */
+}
+#messageI18nFromCss{
+    direction: __MSG_@@bidi_dir__;
+    background-color: __MSG_backgroundColor__;
+}
