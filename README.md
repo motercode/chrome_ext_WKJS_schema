@@ -23,5 +23,6 @@ popup-content.test.js para ejemplo pruebas de integracion.
 
 recuerda cambiar el /static/manifest.json a tu gusto para la extension de crhome_ext_WKJS_schema
 
+debes crear un directorio /dist a donde irá a parar tu extension
 
 las primeras dos lineas del archivo /scr/popup-content.html son para poder hacer el ejemplo del test de integracion y puedes borrarlas .
