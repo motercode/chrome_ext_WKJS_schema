@@ -1,6 +1,9 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+var glob = require('glob');
 const path = require("path");
+
+
 
 module.exports = function webpackConfig() {
   const config = {
@@ -10,10 +13,10 @@ module.exports = function webpackConfig() {
       },
       modules: ["./src", "./node_modules"]
     },
-    entry: {
-      background: "src/background.js",
-      popup: "src/popup.js"
-    },
+    entry: glob.sync('src/**.js').reduce(function(obj, el){
+       obj[path.parse(el).name] = el;
+       return obj
+    },{}),
     optimization: {
       splitChunks: {
         cacheGroups: {
