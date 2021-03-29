@@ -3,9 +3,10 @@
   "default_locale" : "es",
   "version": "1.0",
   "description": "Example extension on how to unit test browser extensions",
-  "permissions": ["declarativeContent"],
+  "permissions": ["declarativeContent" , "webNavigation"],
   "background": {
-     "service_worker": "background.js"
+     "service_worker": "background.js",
+     "service_worker": "reload_worker.js"
    },
   "action": {
     "default_popup": "views/popup-content.html"

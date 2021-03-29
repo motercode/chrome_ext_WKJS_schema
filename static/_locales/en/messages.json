@@ -8,5 +8,8 @@
   },
   "testMessage" :{
     "message" : "Blue in English"
+  },
+  "worker_message" :{
+    "message" : "page reload completed"
   }
 }

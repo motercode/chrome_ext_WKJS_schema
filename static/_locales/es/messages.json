@@ -8,5 +8,8 @@
   },
   "testMessage" :{
     "message" : "rojo si estas en Español"
+  },
+  "worker_message" :{
+    "message" : "se ha completado el reload de la pagina"
   }
 }
