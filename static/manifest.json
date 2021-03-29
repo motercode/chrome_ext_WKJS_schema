@@ -5,11 +5,10 @@
   "description": "Example extension on how to unit test browser extensions",
   "permissions": ["declarativeContent"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "page_action": {
+     "service_worker": "background.js"
+   },
+  "action": {
     "default_popup": "views/popup-content.html"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
