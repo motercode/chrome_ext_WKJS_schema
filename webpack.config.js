@@ -1,9 +1,7 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-var glob = require('glob');
+const glob = require('glob');
 const path = require("path");
-
-
 
 module.exports = function webpackConfig() {
   const config = {

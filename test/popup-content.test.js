@@ -1,6 +1,7 @@
 const chrome =  require("sinon-chrome/extensions");
 global.chrome = chrome;
 const popup = require('src/popup.js')
+import manifest from '/static/manifest.json';
 
 describe("popup.js ", () => {
   beforeAll(() => {
@@ -13,25 +14,27 @@ describe("popup.js ", () => {
 
 
   describe("its internationalized ", () => {
+    it ('it has a "default_locale" : "??" on the manifest file ', ()=>{
+      expect(manifest.default_locale).toBeDefined();
+    });
     it ('it has a folder _locale on dist folder' , ()=>{
        expect(false).toBe(true);
        pending();
     });
-    it ('it has a at least one subfolder matching languages convention on folder _locale ' , ()=>{
-       expect(false).toBe(true);
-       pending();
-    });
-    it ('it has a messages.json file on the language folder' , ()=>{
-       expect(false).toBe(true);
-       pending();
+    it ('it has a at least default_locale subfolder matching languages convention on folder _locale ' , (done)=>{
+       var default_locale = manifest.default_locale;
+       import('/static/_locales/'+default_locale+'/messages.json').then((messages)=> {
+          expect(messages).toBeDefined();
+          done();
+        });
     });
     it ('it has at least on key json on the messages.json file with the extructure tagname:{"message":""} ' , ()=>{
-       expect(false).toBe(true);
-       pending();
-    });
-    it ('it has a "default_locale" : "??" on the manifest file ', ()=>{
-       expect(false).toBe(true);
-       pending();
+      var default_locale = manifest.default_locale;
+      import('/static/_locales/'+default_locale+'/messages.json').then((messages)=> {
+         var firstkey = messages[0];
+         expect(firstkey.message).toBeDefined();
+         done();
+       });
     });
     it ('it returns the expected value on a chrome.i18n.getMessage ', ()=>{
        expect(false).toBe(true);
