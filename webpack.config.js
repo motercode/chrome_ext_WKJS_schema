@@ -11,9 +11,11 @@ module.exports = function webpackConfig() {
       },
       modules: ["./src", "./node_modules"]
     },
-    entry: glob.sync('src/**.js').reduce(function(obj, el){
-       obj[path.parse(el).name] = el;
-       return obj
+    entry: glob.sync('src/**/**.js').reduce(function(obj, el){
+        el = el.replace("src/","");
+        var outputdir= (path.parse(el).dir)+'/'+path.parse(el).name ;
+        obj[outputdir] = el;
+        return obj
     },{}),
     optimization: {
       splitChunks: {

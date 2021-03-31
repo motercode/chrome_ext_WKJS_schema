@@ -51,7 +51,6 @@ describe("popup.js ", () => {
   });
 
 
-
   afterAll(() => {
     chrome.flush();
     delete global.chrome;

@@ -5,12 +5,9 @@ const background = require('src/background.js')
 function PageStateMatcher(datos) {
   this.pageUrl = datos.pageUrl.urlMatches;
 }
-
-
 function ShowPageAction(data) {
     this.data = data;
 }
-
 chrome.declarativeContent.PageStateMatcher = PageStateMatcher;
 chrome.declarativeContent.ShowPageAction = ShowPageAction;
 chrome.declarativeContent.onPageChanged.rules = [];
@@ -28,7 +25,6 @@ describe("background.js ", () => {
   beforeEach(() => {
     chrome.flush();
   });
-
 
   describe("it hooks the popup-content.html to chrome.declarativeContent when called onInstalled ", () => {
     it ('had been not been called runtime.oninstalled.addlistener without call the function' , (done)=>{
