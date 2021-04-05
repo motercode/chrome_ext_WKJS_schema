@@ -42,7 +42,7 @@ module.exports = function webpackConfig() {
       rules: [
         {
           test: /\.(jsx|js)$/,
-          exclude: /node_modules/,
+          exclude: /(static|node_modules)/,
           loader: "babel-loader"
         },
         {

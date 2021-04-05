@@ -28,6 +28,8 @@
     "css-loader": "^5.2.0",
     "glob": "^7.1.6",
     "jasmine": "^3.7.0",
+    "jsdom": "^16.5.2",
+    "jsdom-global": "^3.0.2",
     "karma": "^6.3.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
@@ -37,6 +39,8 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.27.2",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "window-or-global": "^1.0.1",
+    "xmldom": "^0.5.0"
   }
 }

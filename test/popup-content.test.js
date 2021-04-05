@@ -1,6 +1,6 @@
 const chrome =  require("sinon-chrome/extensions");
 global.chrome = chrome;
-const popup = require('src/popup.js')
+const popup = require('src/popup.js');
 import manifest from '/static/manifest.json';
 
 describe("popup.js ", () => {
