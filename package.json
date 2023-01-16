@@ -39,7 +39,7 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.27.2",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.11.1",
     "window-or-global": "^1.0.1",
     "xmldom": "^0.5.0"
   }
