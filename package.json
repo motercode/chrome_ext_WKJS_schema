@@ -37,7 +37,7 @@
     "karma-webpack": "^5.0.0",
     "sinon-chrome": "^3.0.1",
     "style-loader": "^2.0.0",
-    "webpack": "^5.27.2",
+    "webpack": "^5.76.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "window-or-global": "^1.0.1",
